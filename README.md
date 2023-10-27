@@ -19,3 +19,10 @@ group for sprites that the player can collide with
 
 get the surface from anywhere in the code
 pygame.display.get_surface()
+
+direction: pygame.math.Vector2()
+
+### collisions:
+
+- pygame can tell if a collision happened
+- but cannot tell which side collided
