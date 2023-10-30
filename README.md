@@ -61,3 +61,20 @@ move hitbox instead of rect
 put center of rect where hitbox is going to be => rect follows hitbox
 
 order sprites by y position: highest y => on top
+
+### map
+
+needs to be below all of the other element
+in YSOrtedCameraGroup:
+add a surface and a rectangle for the floor => not a sprite
+in custom draw => draw it
+define a surface and blit it
+
+floor_offset_pos = self.floor_rect.topleft - self.offset
+self.display_surface.blit(self.floor_surf, floor_offset_pos)
+
+### Tile class
+
+needs to be more flexible
+It needs to be able to accept graphics with various sizes
+And it should be able to not accept a graphic at all
