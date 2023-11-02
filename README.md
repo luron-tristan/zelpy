@@ -82,3 +82,28 @@ And it should be able to not accept a graphic at all
 On larger object, we want to offset them
 => twice the size of a normal element, subtract TILESIZE from it
 self.rect = self.image.get_rect(topleft= (pos[0], pos[1] - TILESIZE))
+
+### Proper player status
+
+current player status
+12 differnt states
+4x idle
+4x walk
+4x attack
+=> player animation
+
+1. import player graphics
+2. get attack / magic input
+
+pygame does not have a timer function by itself
+
+### State management
+
+player.status = "up" | "left_attack" | "right_idle"...
+pick all the surface in the matching folder ("up" | "left_attack" | "right_idle") and play them repeatedly
+player.direction.input => player.status
+
+### animations
+
+the player has the same image
+=> loop over a list of different images
