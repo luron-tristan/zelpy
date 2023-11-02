@@ -78,3 +78,7 @@ self.display_surface.blit(self.floor_surf, floor_offset_pos)
 needs to be more flexible
 It needs to be able to accept graphics with various sizes
 And it should be able to not accept a graphic at all
+
+On larger object, we want to offset them
+=> twice the size of a normal element, subtract TILESIZE from it
+self.rect = self.image.get_rect(topleft= (pos[0], pos[1] - TILESIZE))
