@@ -107,3 +107,7 @@ player.direction.input => player.status
 
 the player has the same image
 => loop over a list of different images
+
+player attack
+=> create weapon strike next to the player
+=> destroy ot after the attack stops
