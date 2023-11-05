@@ -110,4 +110,12 @@ the player has the same image
 
 player attack
 => create weapon strike next to the player
-=> destroy ot after the attack stops
+=> destroy it after the attack stops
+At first, only weapon is displayed and doesn't do anything
+
+attack to right:
+player faces right, spawn weapon sprite at the rigt side of the player
+
+weapon has to be available inside of the level to interact with enemies, grass
+problem: attack input inside of the player
+solution: def create_attack in level, and pass it to Player()
