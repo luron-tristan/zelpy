@@ -121,3 +121,14 @@ problem: attack input inside of the player
 solution: def create_attack in level, and pass it to Player()
 
 we need to know what weapon is selected
+
+### UI
+
+2 different elements:
+
+1. data: health, energy, xp, etc...
+2. displaying the data (using rects, basically)
+
+converting stat to pixel
+ratio = current / max_amount (100 / 100 = 1) | (50 / 100 = 0.5)
+current_width = bg_rect.width \* ratio (200 x 1 = 200) | (200 x 0.5 = 100)
