@@ -132,3 +132,9 @@ we need to know what weapon is selected
 converting stat to pixel
 ratio = current / max_amount (100 / 100 = 1) | (50 / 100 = 0.5)
 current_width = bg_rect.width \* ratio (200 x 1 = 200) | (200 x 0.5 = 100)
+
+### magic setup
+
+we have a dictionary of our spells
+we give the player and a timer and the ability to switch between spells
+we call a function when the player triggers a magic spell
