@@ -138,3 +138,12 @@ current_width = bg_rect.width \* ratio (200 x 1 = 200) | (200 x 0.5 = 100)
 we have a dictionary of our spells
 we give the player and a timer and the ability to switch between spells
 we call a function when the player triggers a magic spell
+
+### creating the enemies
+
+since player and enemies are similar, they should share the same methods
+=> move and collisions
+
+1. we need data for the enemies
+2. we need to extract the move and collision methods from the player
+3. make these methods available to both the player and the enemies
