@@ -147,3 +147,20 @@ since player and enemies are similar, they should share the same methods
 1. we need data for the enemies
 2. we need to extract the move and collision methods from the player
 3. make these methods available to both the player and the enemies
+
+### player enemy interaction
+
+two ways:
+
+- player => enemy (weapon or magic) => need to check if weapon or magic collides with enemy
+- enemy => player => check distance and attack
+  => 2 more groups: attack and attackable sprites
+  => check collision between these groups, then check tile type
+
+### Particles
+
+A particle is just a sprite with an animation
+=> destroyed once the animation is finished
+
+=> we have a lot of particles
+=> should be imported when the game starts (or it would slow down the game)
