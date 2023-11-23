@@ -4,6 +4,7 @@ from support import import_folder
 from entity import Entity
 
 class Player(Entity):
+
   def __init__(self, pos, groups, obstacle_sprites, create_attack, destroy_attack, create_magic):
     super().__init__(groups)
     self.image = pygame.image.load("../graphics/test/player.png").convert_alpha()
@@ -39,8 +40,8 @@ class Player(Entity):
 
     # stats
     self.stats = { "health": 100, "energy": 60, "attack": 10, "magic": 4 , "speed": 5 }
-    self.health = self.stats["health"] # * 0.5
-    self.energy = self.stats["energy"] # * 0.8
+    self.health = self.stats["health"] * 0.5
+    self.energy = self.stats["energy"] * 0.8
     self.speed = self.stats["speed"]
     self.exp = 123
 
@@ -197,6 +198,12 @@ class Player(Entity):
     base_damage = self.stats["attack"]
     weapon_damage = weapon_data[self.weapon]["damage"]
     return base_damage + weapon_damage
+ 
+  def energy_recovery(self):
+    if self.energy < self.stats["energy"]:
+      self.energy += 0.01 * self.stats["magic"]
+    else:
+      self.energy = self.stats["energy"]
 
   def update(self):
     self.input()
@@ -204,3 +211,4 @@ class Player(Entity):
     self.get_status()
     self.animate()
     self.move(self.speed)
+    self.energy_recovery()

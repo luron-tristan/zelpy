@@ -164,3 +164,6 @@ A particle is just a sprite with an animation
 
 => we have a lot of particles
 => should be imported when the game starts (or it would slow down the game)
+
+flame spell: works like the sword => flame inside of the attackable sprites and check for collisions
+heal: just spawn particles and heal the player
