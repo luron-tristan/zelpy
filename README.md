@@ -167,3 +167,10 @@ A particle is just a sprite with an animation
 
 flame spell: works like the sword => flame inside of the attackable sprites and check for collisions
 heal: just spawn particles and heal the player
+
+### Upgrade menu
+
+1. the player needs to get xp from killing enemies
+2. we upgrade by increasing the values in player.stats
+3. increasing each value will lower our xp
+   => upgrade gui is a bit complicated
